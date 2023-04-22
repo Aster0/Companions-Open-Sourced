@@ -4,7 +4,7 @@
 	<modelVersion>4.0.0</modelVersion>
 	<groupId>me.astero</groupId>
 	<artifactId>companions</artifactId>
-	<version>1.9.2</version>
+	<version>1.9.3</version>
 	<build>
 		<resources>
 			<resource>
@@ -32,27 +32,17 @@
 				<groupId>org.apache.maven.plugins</groupId>
 				<artifactId>maven-shade-plugin</artifactId>
 				<version>3.1.0</version>
+				<configuration>
+					<!-- put your configurations here -->
+				</configuration>
 				<executions>
 					<execution>
 						<phase>package</phase>
 						<goals>
 							<goal>shade</goal>
 						</goals>
-						<configuration>
-							<createDependencyReducedPom>false</createDependencyReducedPom>
-							<minimizeJar>true</minimizeJar>
-							<filters>
-								<filter>
-									<artifact>me.andy:myapi:1.0</artifact>
-									<includes>
-										<include>**</include>
-									</includes>
-								</filter>
-							</filters>
-						</configuration>
 					</execution>
 				</executions>
-
 			</plugin>
 		</plugins>
 

@@ -86,7 +86,7 @@
     <dependency>
       <groupId>org.spigotmc</groupId>
       <artifactId>spigot</artifactId>
-      <version>1.19.2-R0.1-SNAPSHOT</version>
+      <version>1.19.4-R0.1-SNAPSHOT</version>
       <scope>provided</scope>
     </dependency>
 
@@ -106,4 +106,3 @@
     <maven.compiler.source>1.8</maven.compiler.source>
   </properties>
 </project>
-
