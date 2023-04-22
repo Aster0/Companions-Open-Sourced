@@ -1,0 +1,8 @@
+<component name="ArtifactManager">
+  <artifact type="jar" name="Companions">
+    <output-path>$PROJECT_DIR$/out/artifacts/Companions</output-path>
+    <root id="archive" name="Companions.jar">
+      <element id="module-output" name="companions (1)" />
+    </root>
+  </artifact>
+</component>

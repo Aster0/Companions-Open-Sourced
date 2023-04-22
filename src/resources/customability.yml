@@ -1,0 +1,92 @@
+ability:
+  fireball:
+    chance: 5
+  lightning:
+    chance: 5
+  dodge:
+    chance: 5
+  mining_vision:
+    yLevel: 55
+  speed_burst:
+  # Sets how much the duration increases every level in seconds.
+    duration: 2
+    chance: 5    
+  vectorjump:
+    sound: ENTITY_MAGMA_CUBE_JUMP
+    cooldown: 5
+    distanceMultiplier: 2
+  regeneration:
+    chance: 10
+    duration: 5
+  increase_damage:
+    chance: 10
+    duration: 5    
+  speed:
+    chance: 10
+    duration: 5      
+  glowing:
+    chance: 10
+    duration: 5     
+  fire_resistance:
+    chance: 10
+    duration: 5        
+  invisibility:
+    chance: 10
+    duration: 5        
+  jump:
+    chance: 10
+    duration: 5   
+  damage_resistance:
+    chance: 10
+    duration: 5    
+  fast_digging:
+    chance: 10
+    duration: 5    
+  absorption:
+    chance: 10
+    duration: 5   
+  luck:
+    chance: 10
+    duration: 5    
+  wither:
+    chance: 10
+    duration: 5    
+  slow:
+    chance: 10
+    duration: 5    
+  slow_digging:
+    chance: 10
+    duration: 5   
+  confusion:
+    chance: 10
+    duration: 5  
+  weakness:
+    chance: 10
+    duration: 5      
+  levitation:
+    chance: 10
+    duration: 5    
+  poison:
+    chance: 10
+    duration: 5     
+  dolphins_grace:
+    chance: 10
+    duration: 5
+  water_breathing:
+    chance: 10
+    duration: 5
+  hunger:
+    chance: 10
+    duration: 5   
+  # When upgrading FLING, chance upgrades.
+  fling:
+    chance: 10
+    # Set the distance that the enemy will be flung up to.
+    distance: 0.8
+    increaseChanceByLevel: 5
+  command:
+    increaseChanceByLevel: 5    
+  enderman:
+    chance: 10
+    increaseChanceByLevel: 5  
+  

@@ -1,0 +1,1174 @@
+# CUSTOM ABILITIES ARE : 'LEAP', 'FLY', 'DODGE', 'FIREBALL', 'SPEED_BURST', 'MINING_VISION', 'LIGHTNING', 'FLING', 'ENDERMAN', 'COMMAND'.
+
+# Please read the wiki on how to use the COMMAND ability.
+ 
+# There are two categories to custom abilities, one is '_ATTACK_CHANCE' and the other is '_DEFENSE_CHANCE'
+
+# ATTACK_CHANCE - when a player attacks a companion holder that has this ability, the attacker stands a chance to obtain that ability for x duration (configurable in config.yml). Usage example; WITHER_ATTACK_CHANCE
+
+# _DEFENSE_CHANCE - when the companion holder with this ability gets hit, he/she stands a chance to gain this ability. Usage example; REGENERATION_DEFENSE_CHANCE
+
+
+# Here are the potion effects that are compatible with "_ATTACK_CHANCE" & "_DEFENSE_CHANCE"; REGENERATION, INCREASE_DAMAGE, GLOWING, INVISIBILITY, SPEED, FIRE_RESISTANCE, JUMP, DAMAGE_RESISTANCE, FAST_DIGGING, ABSORPTION, LUCK, WITHER, SLOW, SLOW_DIGGING, CONFUSION, WEAKNESS, LEVITATION, POISON.  - https://gitlab.com/Aster0/companions-reborn/wikis/SECTION-3/3.1-Custom-Abilities (for more information)
+
+# You're able to display the Companion's Skull in the GUI by doing -- type: COMPANION_SKULL.
+
+companions:
+  # Permission will be companions.buy.reaper : LINK for a guide on companion creation
+  reaper:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.
+    name: "&8&lREAPER"
+    nameVisible: true
+    sound: ENTITY_PARROT_IMITATE_ENDER_DRAGON    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTM5YjVkMmU2MjRjMTQ3ZWZlNDdiMTMwZTFjZGRiOGEzNzdjZGIzZTc3NDJiZDJjZjRkZGRmNjlhNjg5MjcyIn19fQ=="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE". If you want to use it, "MATERIAL:DATA", e.g., "CLOCK:15" for clock material and nbt data value 15.
+    customModelData: NONE
+    # Set to NONE if you don't want a weapon.
+    weapon: STONE_HOE
+    # Set to NONE if you don't want an ability.
+    # 2@ in front of the ability means start at level 2. This will make it a strength level 2 potion when bought.
+    ability: 2@INCREASE_DAMAGE
+    animation: HEADSHAKE; GHOSTLY
+    chestplate: LEATHER_CHESTPLATE   
+    leatherColor:
+      red: 32
+      green: 32
+      blue: 32
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 360
+      angle2: 270
+      angle3: 286   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0        
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0         
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0
+    GUI:
+      shop:
+        type: COMPANION_SKULL
+        amount: 1
+        name: "&6&lREAPER"
+        price: 5000
+        description:
+          - " "
+          - "&7The Reaper that controls death,"
+          - "&7 transformed into a cute Companion."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ INCREASED DAMAGE"         
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6REAPER Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+  christmas_reaper:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.
+    name: "&8&lREAPER"
+    nameVisible: true
+    sound: ENTITY_PARROT_IMITATE_ENDER_DRAGON    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNzY4N2E3NDA5NWJlYzhiZjg1ZjllODEzZjEyNDk3MWExZGRkMTk5MWY3MTFiNzRmOTg0OWNmZmM5MmU0YjFjIn19fQ=="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE
+    # Set to NONE if you don't want a weapon.
+    weapon: STONE_HOE
+    # Set to NONE if you don't want an ability.
+    ability: INCREASE_DAMAGE
+    animation: HEADSHAKE; GHOSTLY    
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 238
+      green: 238
+      blue: 238
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 360
+      angle2: 270
+      angle3: 286   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0        
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0         
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0   
+    placement:
+      x: 0
+      y: 1.7
+      z: 0       
+    GUI:
+      shop:
+        type: COMPANION_SKULL
+        amount: 1
+        name: "&c&lREAPER (SKIN)"
+        price: 5000
+        description:
+          - " "
+          - "&7The Reaper that controls death,"
+          - "&7 transformed into a cute Companion."
+          - " "
+          - "&7(&6CHRISTMAS SKIN &7- 2019)"
+          - "&6ABILITIES -"
+          - "&e➩ INCREASED DAMAGE"         
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6REAPER Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"         
+
+  frog:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&aFROG" 
+    nameVisible: true    
+    sound: ENTITY_PARROT_IMITATE_PHANTOM     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOTdlYmNlZjQ2ODNjZGI3MTYzZTk2OWU0ZTIyNjlmMzY3M2E1ZDVlNmI3OGUwNmZhZWU0NWJjZjdjNDljMzk3In19fQ=="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: LEAP; SLOW_FALLING
+    chestplate: AIR
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0  
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: EVOKER_SPAWN_EGG
+        amount: 1
+        name: "&6&lFROG"
+        price: 3000
+        description:
+          - " "
+          - "&7*croaks*"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ LEAP INTO THE AIR BY LEFT CLICKING!"        
+          - "&e➩ FALL SLOWER"  
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6FROG Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+          
+  halloween_frog:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&6&lFROG" 
+    nameVisible: true    
+    sound: ENTITY_PARROT_IMITATE_PHANTOM     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvODMxODE3ZGExZTE3MWEzN2E5MDc3ZDliZGExYTFiZmNhZjVmOWEzNWRjOTM5MTc1MWRiZGE0NDg1MTJlMzI4YSJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: LEAP; SLOW_FALLING
+    chestplate: AIR
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0  
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: COMPANION_SKULL
+        amount: 1
+        name: "&6&lFROG (SKIN)"
+        price: 5C
+        description:
+          - " "
+          - "&7*croaks*"
+          - ""
+          - "&7(&6HALLOWEEN SKIN &7- 2019)"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ LEAP INTO THE AIR BY LEFT CLICKING!"        
+          - "&e➩ FALL SLOWER"  
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6FROG Companion&7!"
+          - " "
+          - "&6PRICE: &e5 COMPANION COINS"          
+      
+      
+  pokeball:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&cPOKEBALL"
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    nameVisible: true    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNWZlNDc2NDA4NDM3NDRjZDU3OTY5NzlkMTE5NmZiOTM4MzE3ZWM0MmIwOWZjY2IyYzU0NWVlNGM5MjVhYzJiZCJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: REGENERATION
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 255
+      green: 0
+      blue: 100
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0  
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: SALMON_SPAWN_EGG
+        amount: 1
+        name: "&6&lPOKEBALL"
+        price: 6000
+        description:
+          - " "
+          - "&7I wonder what's stored inside of me?"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ REGENERATION"        
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6POKEBALL Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+     
+      
+  dragon:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&b&lDRAGON"
+    nameVisible: true  
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTMzZjY2ZTE1MTkyNjNlMTA5ZThjOGM4ZDViOWNlNDEwMTQwMjg3MzdlYjk4OWU3YWU4ZmM2ZGUxYzcyNjdhYiJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: DAMAGE_RESISTANCE; INCREASE_DAMAGE; FLY
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 0
+      green: 193
+      blue: 232
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0 
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: SHULKER_SPAWN_EGG
+        amount: 1
+        name: "&6&lDRAGON"
+        price: 321000
+        description:
+          - " "
+          - "&7I'm a legend that hold many"
+          - "&7 abilities to my name."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ FLY"
+          - "&e➩ DAMAGE RESISTANCE"
+          - "&e➩ INCREASED DAMAGE"          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6DRAGON Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+       
+      
+  cake:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "CAKE"
+    nameVisible: true  
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvM2MzN2ViODUyNTVmMWI3NTRkMTA4YmUyZGRhZDY1MTk5YjFkNzA4YmZhNjBiMTZkYzIwZjE3YzkxNzFjNDI2In19fQ=="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: HUNGER; REGENERATION_DEFENSE_CHANCE
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 102
+      green: 51
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0 
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: CHICKEN_SPAWN_EGG
+        amount: 1
+        name: "&6&lCAKE"
+        price: 7000
+        description:
+          - " "
+          - "&7The cake is a lie?"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ INCREASED HUNGER"
+          - "&e➩ Chance to gain regeneration when attacked"
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6CAKE Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+ 
+      
+  turtle:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&2TURTLE"
+    nameVisible: true  
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEyYjU4Yzg0MWIzOTQ4NjNkYmNjNTRkZTFjMmFkMjY0OGFmOGYwM2U2NDg5ODhjMWY5Y2VmMGJjMjBlZTIzYyJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: WATER_BREATHING; SLOW_ATTACK_CHANCE; DAMAGE_RESISTANCE
+    chestplate: AIR
+    leatherColor:
+      red: 0
+      green: 102
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: TURTLE_SPAWN_EGG
+        amount: 1
+        name: "&6&lTURTLE"
+        price: 5000
+        description:
+          - " "
+          - "&7I have a hard shell that protects you."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ WATER BREATHING"
+          - "&e➩ DAMAGE RESISTANCE"
+          - "&e➩ Chance to give your attackers slowness"          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6TURTLE Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+      
+      
+  ghast:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&lGHAST"
+    nameVisible: true   
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvOGI2YTcyMTM4ZDY5ZmJiZDJmZWEzZmEyNTFjYWJkODcxNTJlNGYxYzk3ZTVmOTg2YmY2ODU1NzFkYjNjYzAifX19"
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: INCREASE_DAMAGE_DEFENSE_CHANCE; FIREBALL
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 250
+      green: 255
+      blue: 250
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: GHAST_SPAWN_EGG
+        amount: 1
+        name: "&6&lGHAST"
+        price: 8000
+        description:
+          - " "
+          - "&7Shooting fireballs is my forte."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ Chance to gain strength when attacked"
+          - "&e➩ Chance to shoot fireball on left-click"
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6GHAST Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"    
+               
+
+  kirby:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&dKIRBY"
+    nameVisible: true    
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZTljYjU5ZTBmMGIzZDBkYzhiMjFjZDJhYmZmOGYyNjdmYjZjYWFkOTdmN2IxZDBiMmIwNzg1NTdlNjZjY2QxIn19fQ=="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: SPEED; LEVITATION_ATTACK_CHANCE
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 255
+      green: 102
+      blue: 178
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: PIG_SPAWN_EGG
+        amount: 1
+        name: "&6&lKIRBY"
+        price: 4000
+        description:
+          - " "
+          - "&7I'm just here to look cute!"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ INCREASED SPEED"
+          - "&e➩ Chance to give your attackers levitation"          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6KIRBY Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+      
+
+  naruto:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&6NARUTO"
+    nameVisible: true   
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYjA2ZTM0YzFjOTRjN2I4MjljNTlkMDFjNzQ1M2Q1ZjNlODI1OWYzODljMmFjYTJmYTMxNGRjYTQwODY5M2NlIn19fQ=="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: DODGE; REGENERATION_DEFENSE_CHANCE; SPEED
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 255
+      green: 153
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: TROPICAL_FISH_SPAWN_EGG
+        amount: 1
+        name: "&6&lNARUTO"
+        price: 10000
+        description:
+          - " "
+          - "&7I come and go like"
+          - "&7 you never see me coming."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ INCREASED SPEED"
+          - "&e➩ Chance to gain regeneration when attacked"
+          - "&e➩ Chance to dodge attacks when attacked"          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6NARUTO Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+   
+
+  knight:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "KNIGHT"
+    nameVisible: true  
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjdjMTc4NjVjMjc5MzRmOGM4ZWM2YzYyN2UxZmUyZDk5Zjc4M2VjOGFlNDE0Y2EyZDRmZDM2NDBhN2YzYyJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: DIAMOND_SWORD
+    # Set to NONE if you don't want an ability.
+    ability: WITHER_ATTACK_CHANCE; INCREASE_DAMAGE; DAMAGE_RESISTANCE_DEFENSE_CHANCE
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 255
+      green: 255
+      blue: 204
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 346 
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0 
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: VEX_SPAWN_EGG
+        amount: 1
+        name: "&6&lKNIGHT"
+        price: 10000
+        description:
+          - " "
+          - "&7I fight with honor."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ INCREASED STRENGTH"
+          - "&e➩ Chance to give your attackers wither"   
+          - "&e➩ Chance to gain damage resistance when attacked"       
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6KNIGHT Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+          
+  miner:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "MINER"
+    nameVisible: true
+    sound: ENTITY_PARROT_IMITATE_PHANTOM    
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZmM4Mjc0MmIyYTE3ZWViZGVhYWQyYjk1ZTU2NmE1ZjAyNTBjMzU1NzQyOWY2YTM5YTc5YjZhYjhiZjgifX19"
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: DIAMOND_PICKAXE
+    # Set to NONE if you don't want an ability.
+    ability: FAST_DIGGING; MINING_VISION
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 204
+      green: 204
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 28
+      angle2: 0
+      angle3: 0  
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: BLAZE_SPAWN_EGG
+        amount: 1
+        name: "&6&lMINER"
+        price: 70000
+        description:
+          - " "
+          - "&7Mining, mining, mining."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ Fast Digging"
+          - "&e➩  Gain night-vision when mining underground"                 
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6MINER Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"
+  cloud:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&lCLOUD" 
+    nameVisible: true    
+    sound: ENTITY_PARROT_IMITATE_PHANTOM     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvNDY2YjEwYmY2ZWUyY2Q3ZTNhYzk2ZDk3NDllYTYxNmFhOWM3MzAzMGJkY2FlZmZhZWQyNDllNTVjODQ5OTRhYyJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: LIGHTNING
+    chestplate: AIR
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 37
+      angle2: 0
+      angle3: 0  
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: BONE_MEAL
+        amount: 1
+        name: "&6&lCLOUD"
+        price: 50000
+        description:
+          - " "
+          - "&7Careful not to make the"
+          - "&7 Cloud Companion angry! Because it's striking!"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ CHANCE TO STRIKE LIGHTNING ON ENEMY HIT"         
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6CLOUD Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"   
+          
+  xavier:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&eXAVIER" 
+    nameVisible: true    
+    sound: ENTITY_PARROT_IMITATE_PHANTOM     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzUzZjZhNGE4ZTY4ZWRmYzE0OWIyZTMyNTk3ZGYzZTVmNGMzNTgxZjdhNDdjMzg1MTRhYjJhNGVkYTM5NTA1ZCJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: FISHING_ROD
+    # Set to NONE if you don't want an ability.
+    ability: SPEED_BURST
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 177
+      green: 149
+      blue: 183
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: TROPICAL_FISH
+        amount: 1
+        name: "&6&lXAVIER"
+        price: 50000
+        description:
+          - " "
+          - "&7A mysterious masked man."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ CHANCE TO ACTIVATE SPEED BURST ON HIT"         
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6XAVIER Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"   
+          
+  wizard:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&9&lWIZARD" 
+    nameVisible: true    
+    sound: ENTITY_PARROT_IMITATE_PHANTOM     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjEyNzg5ZWYwMjk1MzAwNzQ1ODU0NDJmYWUxMmJkOTFjODk0N2MwZjFiNDU2Y2YxMGMxYThkZWUyMDkxMDNkYyJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: BLAZE_ROD
+    # Set to NONE if you don't want an ability.
+    ability: LIGHTNING; FIREBALL; LEVITATION_DEFENSE_CHANCE
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 123
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0  
+    placement:
+      x: 0
+      y: 1.7
+      z: 0      
+    GUI:
+      shop:
+        type: LEGACY_RED_ROSE
+        amount: 1
+        name: "&6&lWIZARD"
+        price: 50000
+        description:
+          - " "
+          - "&7The definition of Magic."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ CHANCE TO SEND OUT LIGHTNING ON ENEMY HIT"         
+          - "&e➩ CHANCE TO SHOOT OUT FIREBALLS"     
+          - ""
+          - "&cTHE WIZARD HAS UNSTABLE SKILLS, THEREFORE, IT CAUSES YOU TO"
+          - "&cLEVITATE WHEN DAMAGED OCCASIONALLY."          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6WIZARD Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"   
+
+  shark:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&1&lSHARK" 
+    nameVisible: true    
+    sound: ENTITY_ELDER_GUARDIAN_AMBIENT     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMzE2MzZhZTZlNTU4Y2Y4MzVlN2E0M2JjZmQwYmQ0YTI3N2Q1NmQ2NmE1ZjRjOGJjYzBhMDNlZDY2MzI1MTAifX19"
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: WATER_BREATHING; DOLPHINS_GRACE; SLOW_DEFENSE_CHANCE
+    chestplate: AIR
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0 
+    placement:
+      x: 0
+      y: 1.7
+      z: 0       
+    GUI:
+      shop:
+        type: PRISMARINE_SHARD
+        amount: 1
+        name: "&6&lSHARK"
+        price: 20000
+        description:
+          - " "
+          - "&7Faster than most fish."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ FASTER SPEED IN WATER"         
+          - "&e➩ FISH LUNGS - WATER BREATHING"        
+          - " "
+          - "&cDON'T GET CAUGHT IN FISHING NETS!"
+          - "&cA CHANCE FOR YOU TO GET A SLOWNESS EFFECT ON DAMAGE"  
+          - ""
+          - "&7(&c!&7) As your Companion grows stronger,"
+          - "&7 your debuff grows stronger too!"       
+          - ""          
+          - "&6&lLEFT CLICK &7to purchase the &6SHARK Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"          
+
+  irongolem:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&7&lIRON GOLEM" 
+    nameVisible: true    
+    sound: ENTITY_IRON_GOLEM_ATTACK     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvYTQzNzllYTNlODFkOWQzYjk5Yzk5YmMzNzIyMzRkMmJhYjQ5MzFlNzU4NGVkMzc5N2M0ZWE4OGU3ZGQ4NmExNSJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: SLOW; FLING
+    chestplate: IRON_CHESTPLATE
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0        
+    GUI:
+      shop:
+        type: IRON_INGOT
+        amount: 1
+        name: "&6&lIRON GOLEM"
+        price: 20000
+        description:
+          - " "
+          - "&7Doesn't like people coming close."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ CHANCE TO FLING YOUR ENEMIES UP."             
+          - " "
+          - "&cDUE TO THE HEAVINESS, "
+          - "&c YOU'RE SLOWED DOWN!"  
+          - ""
+          - "&7(&c!&7) As your Companion grows stronger,"
+          - "&7 your debuff grows stronger too!"          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6IRONGOLEM Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"   
+          
+  goldenapple:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&e&lGOLDEN APPLE" 
+    nameVisible: true    
+    sound: BLOCK_METAL_STEP     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvMjI4NjhlYzZkYmRiYjZiZWNmNjk4ZGExMzZlN2E2Y2QyOGUxOTMxNDc5NmNlMjZhM2Y2N2Q2YWI2NTZlYjIxOSJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: COMMAND/15/25/eco give %player% 2500/&6You have received $2500!/&6This is a broadcast message to say that %player% just received $2500!; SLOW
+    chestplate: AIR
+    leatherColor:
+      red: 0
+      green: 0
+      blue: 0
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0 
+    placement:
+      x: 0
+      y: 1.7
+      z: 0       
+    GUI:
+      shop:
+        type: GOLDEN_APPLE
+        amount: 1
+        name: "&6&lGOLDEN APPLE"
+        price: 20000
+        description:
+          - " "
+          - "&7The Apple of wealth."
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ CHANCE TO GIVE YOU MONEY"
+          - " &eEVERY 15 MINUTES!"          
+          - " "
+          - "&cTHE WEALTH IS ACCOMPANIED "
+          - "&c BY SOME WEIGHT."  
+          - ""
+          - "&7(&c!&7) As your Companion grows stronger,"
+          - "&7 your debuff grows stronger too!"          
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6GOLDENAPPLE Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"      
+
+
+  enderman:
+    # Sets the companion's unique name - THIS DOES NOT REFLECT IN THE GUI.  
+    name: "&5&lENDERMAN" 
+    nameVisible: true    
+    sound: BLOCK_METAL_STEP     
+    playerSkull: "eyJ0ZXh0dXJlcyI6eyJTS0lOIjp7InVybCI6Imh0dHA6Ly90ZXh0dXJlcy5taW5lY3JhZnQubmV0L3RleHR1cmUvZjcxNWNhMGY3NDI1NDRhZTNjYTEwNDI5NzU3OGMyZWQ3MDBlYTNhNTQ5ODA0MTM1MTJmNWU3YTBiYzA2NzI5YSJ9fX0="
+    # This uses custom model data and it overwrites the player skull if it's not set to "NONE".
+    customModelData: NONE    
+    # Set to NONE if you don't want a weapon.
+    weapon: NONE
+    # Set to NONE if you don't want an ability.
+    ability: ENDERMAN
+    chestplate: LEATHER_CHESTPLATE
+    leatherColor:
+      red: 102
+      green: 0
+      blue: 113
+    # Get POSE angles here : https://haselkern.com/Minecraft-ArmorStand/
+    rightArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0   
+    leftArmPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0              
+    headPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0    
+    bodyPose: 
+      angle1: 0
+      angle2: 0
+      angle3: 0
+    placement:
+      x: 0
+      y: 1.7
+      z: 0        
+    GUI:
+      shop:
+        type: ENDER_PEARL
+        amount: 1
+        name: "&6&lENDERMAN"
+        price: 20000
+        description:
+          - " "
+          - "&7Can't touch me!"
+          - " "
+          - "&6ABILITIES -"
+          - "&e➩ CHANCE TO TOSS AN ENDERPEARL"
+          - " &eAT A RANDOM DISTANCE ON HIT."             
+          - ""
+          - "&6&lLEFT CLICK &7to purchase the &6ENDERMAN Companion&7!"
+          - " "
+          - "&6PRICE: &e$%price%"                   
+      

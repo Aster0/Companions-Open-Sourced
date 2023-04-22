@@ -1,0 +1,248 @@
+# Make sure you're using the correct MATERIAL name for your server's version : https://hub.spigotmc.org/javadocs/spigot/org/bukkit/Material.html
+
+# You're able to use placeholders for names that are not fully capitalized. To use, just add a "_l" behind placeholders, e.g, %companion_l%, %active_companion_l%.
+
+settings:
+  # Check if the plugin is up to date.
+  versionChecking: true
+  # Set the keyword to cancel chat actions like changing weapons/name.
+  cancelKeyWord: "cancel"
+  # Plays an action bar of the Companion's name when it's equipped.
+  actionBarMessage: true
+  # Set what's the max upgradable ability level - It's advisable to put a level lower than 5.
+  maxAbilityLevel: 3
+  # Set the max name length a player can set to.
+  maxNameLength: 10
+  abilityMaxedOutItem: GUNPOWDER
+  # The range determines how far other players are able to see someone's Companion at. Change at your own risk, a higher range might result in more resourced used.
+  packetSearchRange: 10, 10, 10
+  # companionTalk is removed temporarily (hopefully).
+  companionTalk:
+    - "&7Heh. That tickles!"
+    - "&7Get your hands away from me!"
+    - "&7What?"
+    - "&7Yes?"
+    - "&7Knock, knock! .. Who's there?"
+    - "&7What am I?"
+    - "&7... Where am I?"
+  # interactCooldown is counted by seconds.    
+  interactCooldown: 3
+  # Set how frequent should the plugin save its necessary files.(in minutes)
+  saveTime: 60
+  vanish:
+    perms: essentials.vanish
+    commands: /v, /vanish
+  
+  # Set which names that you don't want players' companions having. 
+  # companions.admin.blacklist - allows you to override the blacklist system using this permission node.
+  blacklistedNames:
+    - "dick"
+    - "fuck"
+  # Set which worlds you do not want Companions to be used in.  
+  disabledWorlds:
+    - world1
+    - world2
+  # Set which line to not show in the owned Companion ItemStacks
+  replacedOwnedLores:
+    - "&6&lLEFT CLICK &7to purchase the &6%companion% Companion&7!"
+    - "&6PRICE: &e$%price%"
+  
+  # true: Kick player if cache is not loaded for them properly. (To ensure all Companions Data are loaded for the player)
+  ensureCache: true
+    
+database:
+  use: false
+  hostname: localhost
+  port: 3306
+  username: "root"
+  password: ""
+  databaseName: "companions"
+  tablePrefix: "companions_"
+    
+items:
+  companionToken:
+    name: "&6&lCOMPANION TOKEN"
+    type: GHAST_TEAR
+    description: 
+      - ""
+      - "&6&lRIGHT CLICK &7on a block"
+      - " to redeem your mystery Companion!"
+    particleAnimation: EXPLOSION_LARGE
+    soundOnUse: BLOCK_BEACON_POWER_SELECT
+    
+GUI:
+  goBack:
+    type: BARRIER
+    amount: 1
+    name: "&6&lPREVIOUS PAGE"
+    slot: 45
+    description:
+      - " "
+      - "&6&lLEFT CLICK &7to go back to the previous page."    
+  nextPage:
+    type: ARROW
+    amount: 1
+    name: "&6&lNEXT PAGE"
+    slot: 53
+    description:
+      - " "
+      - "&6&lLEFT CLICK &7to go back to the next page."  
+  open-companions:
+    title: "&6&lCOMPANIONS"
+    size: 9
+    openSound: BLOCK_BEACON_ACTIVATE
+    
+    items:
+      companion-shop:
+        type: PUFFERFISH_SPAWN_EGG
+        amount: 1
+        name: '&6PURCHASE COMPANIONS'
+        slot: 0
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to view a list of companions"
+          - "&7that you can purchase!"
+      owned-companions:
+        type: CHEST
+        amount: 1
+        name: '&6OWNED COMPANIONS'
+        slot: 4
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to view a list of companions"
+          - "&7that you own!"   
+      upgrade-abilities:
+        type: PAPER
+        amount: 1
+        name: '&6UPGRADE ABILITIES'
+        slot: 8
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to view a list of upgrades"
+          - "&7that you can do on your companion!"                   
+          
+
+  open-companions-shop:
+    title: "&6&lCOMPANIONS SHOP"
+    size: 54
+    openSound: BLOCK_BEACON_ACTIVATE     
+    
+    # Set which menu it goes back to when you reach to page 0. Great for creating custom menus.
+    goBackCommand: "companions"      
+        
+  owned-companions:
+    title: "&6&lOWNED COMPANIONS"
+    size: 54
+    openSound: BLOCK_BEACON_ACTIVATE    
+    
+    # Set which menu it goes back to when you reach to page 0. Great for creating custom menus.
+    goBackCommand: "companions"  
+    
+    items:
+      companionDetails:
+        type: PAPER
+        amount: 1
+        name: "&6&lCOMPANION DETAILS"
+        slot: 0
+        description:
+          - " "
+          - "&6ACTIVE COMPANION: &e%active_companion%"
+          - "&6COMPANION COINS: &e%companions_coins%"
+          - ""
+          - "&6&lLEFT CLICK &7to remove your active companion."   
+  upgrade-abilities:
+    title: "&6&lUPGRADING.."
+    size: 9
+    openSound: BLOCK_BEACON_ACTIVATE  
+    
+    # Set which menu it goes back to when you reach to page 0. Great for creating custom menus.
+    goBackCommand: "companions"    
+    
+    items:
+      upgradeDetails:
+        type: PAPER
+        amount: 1
+        name: "&6&lUPGRADE DETAILS"
+        slot: 1
+        description:
+          - " "
+          - "&6You are currently upgrading &e%active_companion%"    
+          - " "
+          - "&6&lDETAILS"
+          - "&eNAME: &6%companion_name%"               
+          - "&eLEVEL: &6%companion_level%"     
+          - ""
+          - "&7(You can only upgrade your active companion!)"
+      goBack:
+        type: BARRIER
+        amount: 1
+        name: "&6&lPREVIOUS PAGE"
+        slot: 0
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to go back to the previous page."          
+      abilityLevel:
+        type: EXPERIENCE_BOTTLE
+        amount: 1
+        maxedName: "&6&lABILITY MAXED OUT"
+        name: "&6&lUPGRADE ABILITY LEVEL"
+        slot: 3
+        price: 10000
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to upgrade your ability level!"
+          - "&6&lRIGHT CLICK &7 to lower your ability level!"
+          - " "
+          - "&6PRICE: &e$10,000"    
+        maxedDescription:   
+          - " "
+          - "&7You can no longer upgrade your active companion"   
+          - ""
+          - "&6&lRIGHT CLICK&7 to lower your ability level!"
+          - " "
+          - "&6PRICE: &e$10,000"              
+      renameCompanion:
+        type: NAME_TAG
+        amount: 1
+        name: "&6&lRENAME COMPANION"
+        slot: 4
+        price: 1C
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to rename your companion!"
+          - " "
+          - "&6PRICE: &e1 COMPANION COIN"         
+      hideCompanionName:
+        type: MAP
+        amount: 1
+        name: "&6&lHIDE COMPANION'S NAME"
+        slot: 5
+        price: 2000
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to hide your companion's name!"
+          - " "
+          - "&7(If already bought, this perk reshows the companion name)"
+          - "&6PRICE: &e$2,000"      
+      changeWeapon:
+        type: DIAMOND_SWORD
+        amount: 1
+        name: "&6&lCHANGE COMPANION'S WEAPON"
+        slot: 6
+        price: 6000
+        description:
+          - " "
+          - "&6&lLEFT CLICK &7to change your companion's weapon!"
+          - " "
+          - "&6PRICE: &e$6,000"
+  player-details:
+    title: "&6&lVIEWING &e%target%'S&6&l DETAILS.."
+    openSound: BLOCK_BEACON_ACTIVATE    
+    items:
+      companionDetails:
+        description:
+          - " "
+          - "&6ACTIVE COMPANION: &e%active_companion%"  
+          - "&6COMPANION COINS: &e%companions_coins%"
+       
+    
